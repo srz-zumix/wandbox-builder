@@ -26,11 +26,13 @@ docker run \
   melpon/wandbox:test-server \
   /bin/bash -c "
     set -e
-
+    
     mkdir /usr/share/perl || true
     touch /var/test.sqlite
+    mkdir -p ~/wandbox/cattleshed/etc
+    sed '/uids/d' /opt/wandbox/cattleshed/etc/cattleshed.conf > ~/wandbox/cattleshed/etc/cattleshed.conf
     /opt/wandbox/cattleshed/bin/cattleshed \
-      -c /opt/wandbox/cattleshed/etc/cattleshed.conf \
+      -c ~/wandbox/cattleshed/etc/cattleshed.conf \
       -c /opt/wandbox/cattleshed-conf/compilers.default &
     sleep 1
     /opt/wandbox/kennel/bin/kennel \
