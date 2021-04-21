@@ -31,12 +31,15 @@ apt-get install -y \
   systemtap-sdt-dev \
   uuid-dev
 
-clang++ --version
-python --version
-# update-alternatives --install /usr/bin/clang clang /usr/bin/clang-11 100 \
-#   --slave /usr/bin/clang++ clang++ /usr/bin/clang++-11
+update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-11 100 \
+  --slave /usr/bin/clang clang /usr/bin/clang-11
 update-alternatives --install /usr/bin/python python /usr/bin/python3 100 \
   --slave /usr/bin/pip pip /usr/bin/pip3
 pip install six
+
+clang++ --version
+python --version
+
+dpkg -l | grep icu
 
 ./install.sh
