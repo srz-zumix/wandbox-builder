@@ -42,4 +42,4 @@ python --version
 
 dpkg -l | grep icu
 
-./install.sh
+# ./install.sh
