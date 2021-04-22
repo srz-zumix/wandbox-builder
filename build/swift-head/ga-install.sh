@@ -37,9 +37,5 @@ update-alternatives --install /usr/bin/python python /usr/bin/python3 100 \
   --slave /usr/bin/pip pip /usr/bin/pip3
 pip install six
 
-clang++ --version
-python --version
-
-dpkg -l | grep icu
-
+env
 # ./install.sh
