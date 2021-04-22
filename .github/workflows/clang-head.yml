@@ -4,7 +4,7 @@ on:
     branches:
       - master
     paths:
-      - build/swift-head/**
+      - build/clang-head/**
 
 jobs:
   heads:
@@ -13,8 +13,8 @@ jobs:
       matrix:
         name:
           # - gcc-head
-          # - clang-head
-          - swift-head
+          - clang-head
+          # - swift-head
           # - nodejs-head
           # - gdc-head
           # - openjdk-head
