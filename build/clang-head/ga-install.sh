@@ -15,6 +15,7 @@ apt-get install -y \
   libmpfr-dev \
   libstdc++-5-dev \
   libtool \
+  python3 \
   wget
 
 CMAKE_VERSION="3.16.3"
@@ -32,12 +33,11 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 export PATH="$HOME/.pyenv/bin:$PATH"
 echo "eval $(pyenv init -)" >> ~/.bashrc
 echo "eval $(pyenv virtualenv-init -)" >> ~/.bashrc
-eval $(pyenv init -)
-eval $(pyenv virtualenv-init -)
 pyenv install 3.8.6
 pyenv global 3.8.6
 pyenv versions
 
+$HOME/.pyenv/versions/3.8.6/bin/python --version
 python --version
 
 ./install.sh
