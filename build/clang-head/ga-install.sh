@@ -34,10 +34,13 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 echo "eval $(pyenv init -)" >> ~/.bashrc
 echo "eval $(pyenv virtualenv-init -)" >> ~/.bashrc
 pyenv install 3.8.6
+pyenv rehash
 pyenv global 3.8.6
 pyenv versions
 
+cat $HOME/.pyenv/version
 $HOME/.pyenv/versions/3.8.6/bin/python --version
 python --version
+python3 --version
 
 ./install.sh
