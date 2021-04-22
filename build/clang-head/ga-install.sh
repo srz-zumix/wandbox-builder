@@ -29,4 +29,11 @@ tar xf cmake-${CMAKE_VERSION}-Linux-x86_64.tar.gz
 mkdir -p /usr/local/wandbox/
 mv cmake-${CMAKE_VERSION}-Linux-x86_64 $CMAKE_PREFIX
 
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+export PATH="$HOME/.pyenv/bin:$PATH"
+echo "eval $(pyenv init -)" >> ~/.bashrc
+echo "eval $(pyenv virtualenv-init -)" >> ~/.bashrc
+pyenv install 3.8.6
+pyenv global 3.8.6
+
 ./install.sh
