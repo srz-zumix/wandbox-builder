@@ -37,5 +37,6 @@ update-alternatives --install /usr/bin/python python /usr/bin/python3 100 \
   --slave /usr/bin/pip pip /usr/bin/pip3
 pip install six
 
-env
-# ./install.sh
+./install.sh
+
+find /opt/wandbox/swift-head/
