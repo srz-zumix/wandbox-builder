@@ -39,7 +39,5 @@ eval "$(pyenv virtualenv-init -)"
 pyenv install 3.8.6
 pyenv rehash
 pyenv global 3.8.6
-pyenv versions
-python --version
 
-# ./install.sh
+./install.sh
