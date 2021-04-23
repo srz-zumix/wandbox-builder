@@ -38,15 +38,9 @@ pyenv rehash
 pyenv global 3.8.6
 pyenv versions
 
-cat $HOME/.pyenv/version
-$HOME/.pyenv/versions/3.8.6/bin/python --version
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 python --version
-python3 --version
-
-which python
-file /usr/bin/python
-
-bash -C python --version
-bash -C python3 --version
 
 ./install.sh
