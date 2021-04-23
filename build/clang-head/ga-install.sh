@@ -33,14 +33,13 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 export PATH="$HOME/.pyenv/bin:$PATH"
 echo "eval $(pyenv init -)" >> ~/.bashrc
 echo "eval $(pyenv virtualenv-init -)" >> ~/.bashrc
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 pyenv install 3.8.6
 pyenv rehash
 pyenv global 3.8.6
 pyenv versions
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 python --version
 
-./install.sh
+# ./install.sh
