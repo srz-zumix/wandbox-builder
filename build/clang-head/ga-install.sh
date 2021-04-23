@@ -44,6 +44,7 @@ python --version
 python3 --version
 
 which python
+file /usr/bin/python
 
 bash -C python --version
 bash -C python3 --version
