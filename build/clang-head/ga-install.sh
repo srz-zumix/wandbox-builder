@@ -43,6 +43,8 @@ $HOME/.pyenv/versions/3.8.6/bin/python --version
 python --version
 python3 --version
 
+which python
+
 bash -C python --version
 bash -C python3 --version
 
